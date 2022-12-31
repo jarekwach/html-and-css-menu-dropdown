@@ -1,59 +1,82 @@
 :root {
-    --color-alfa: rgb(220, 220, 220);
-    --color-beta: rgb(0, 200, 250);
+	--color-alfa: #f9f9f9;
+	--color-beta: #306273;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
-    background: var(--color-beta);
-    display: flex;
-    padding: 10px;
+	background: var(--color-beta);
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px;
 }
 
 .nav__item {
-    background: var(--color-alfa);
-    cursor: pointer;
-    padding: 0 5px;
-    margin-left: 5px;
-    position: relative;
+	background: var(--color-alfa);
+	cursor: pointer;
+	padding: 10px 20px;
+	margin-left: 15px;
+	position: relative;
+	text-transform: uppercase;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgb(0, 0, 0);
+	transition: background-color 0.3s;
+}
+
+.nav__item:hover {
+	background-color: #e4f2f1;
+}
+
+.nav__item:last-child {
+	margin-right: 50px;
 }
 
 .nav__item--no-space {
-    margin-left: 0;
+	margin-left: 0;
 }
 
 .nav__link {
-    display: inline-block;
-    color: var(--color-beta);
-    height: 100%;
-    text-decoration: none;
-    width: 100%;
+	display: inline-block;
+	color: var(--color-beta);
+	height: 100%;
+	text-decoration: none;
+	width: 100%;
+	font-weight: bold;
 }
 
 .nav__item:hover > .nav__dropdown {
-    display: block;
+	display: block;
 }
 
 .nav__dropdown {
-    display: none;
-    padding-top: 20px;
-    position: absolute;
-    left: 0;
+	display: none;
+	padding-top: 35px;
+	position: absolute;
+	left: 0;
 }
 
 .dropdown__item {
-    background: var(--color-beta);
-    border-bottom: 3px solid var(--color-alfa);
-    padding: 5px 20px;
-    min-width: 120px;
+	background: var(--color-beta);
+	border-bottom: 3px solid var(--color-alfa);
+	padding: 10px 20px;
+	min-width: 140px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 8px;
 }
 
 .dropdown__link {
     display: inline-block;
-    color: var(--color-alfa);
-    height: 100%;
-    text-decoration: none;
-    width: 100%;
+	color: var(--color-alfa);
+	height: 100%;
+	text-decoration: none;
+	width: 100%;
+    transition: color 0.3s;
 }
 
-
-
+.dropdown__item:hover .dropdown__link {
+	color: #e4f2f1;
+}
